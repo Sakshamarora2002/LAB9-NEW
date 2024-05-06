@@ -5,8 +5,5 @@
   "scripts": {
     "build": "npm run build"
   },
-  "dependencies": {
-    // Your dependencies
-  }
 }
 
