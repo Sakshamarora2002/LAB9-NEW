@@ -1,18 +1,25 @@
-stages:
-  - build
-  - deploy
+name: My CI/CD Pipeline
 
-build:
-  stage: build
-  script:
-    - echo "Building the application..."
-    # Add any build commands here
+on:
+  push:
+    branches:
+      - main
 
-deploy:
-  stage: deploy
-  script:
-    - echo "Deploying the application..."
-    # Add any deployment commands here
-  environment:
-    name: production
-    url: http://example.com
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+          
+      - name: Build application
+        run: npm run build
+
+      - name: Deploy application
+        run: |
+          echo "Deploying the application..."
+          # Add your deployment commands here
