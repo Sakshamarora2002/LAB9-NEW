@@ -1,0 +1,10 @@
+// config.test.json
+{
+  "database": {
+    "url": "mongodb://test-db-host:27017/test_db"
+  },
+  "api": {
+    "endpoint": "http://test-api-host:3000/api"
+  }
+}
+

@@ -1,0 +1,10 @@
+// config.prod.json
+{
+  "database": {
+    "url": "mongodb://prod-db-host:27017/prod_db"
+  },
+  "api": {
+    "endpoint": "http://prod-api-host:3000/api"
+  }
+}
+
